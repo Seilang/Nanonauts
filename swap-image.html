@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Swap Image </title>
+<link type="text/css" rel="stylesheet" href="css/style-sheet.css"/>
+</head>
+<body>
+  <header>
+    <p> <sup>the</sup>nanonauts</p>
+    <h1> Swap Image </h1>
+  </header>
+  <nav>
+    <ul>
+        <li> <a href="index.html">Home</a> </li>
+        <li> <a href="about-us.html">About Us</a> </li>
+        <li> <a href="our-songs.html">Our Songs</a> </li>
+        <li> <a href="see-us-play.html">See Us Play</a> </li>
+        <li> <a href="playing-a-concert.html">Playing a Concert</a> </li>
+        <li class="selected">Swap Image </li>
+
+    </ul>
+  </nav>
+  <p>
+    <img id="display-image" onclick="swapImage()" src="images/01.jpg" width="180" height="180"/>
+  </p>
+  <p>Click the image to change it!</p>
+  <script>
+  function swapImage() {
+    var imageDisplayed = document.getElementById('display-image');
+    if (imageDisplayed.src.match("images/01.jpg")) {
+      imageDisplayed.src = "images/02.jpg";
+    }
+    else {
+      imageDisplayed.src = "images/01.jpg";
+    }
+  }
+  </script>
+</body>
+</html>
